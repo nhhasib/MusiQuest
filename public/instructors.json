@@ -1,103 +1,101 @@
 [
-      {
-        "instructor_id": 1,
-        "name": "John Smith",
-        "email": "johnsmith@example.com",
-        "image": "johnsmith.jpg",
-        "classes": [
-          "Introduction to Music Theory",
-          "Advanced Music Theory"
-        ]
-      },
-      {
-        "instructor_id": 2,
-        "name": "Emily Johnson",
-        "email": "emilyjohnson@example.com",
-        "image": "emilyjohnson.jpg",
-        "classes": [
-          "Guitar Fundamentals",
-          "Intermediate Guitar Techniques"
-        ]
-      },
-      {
-        "instructor_id": 3,
-        "name": "Michael Davis",
-        "email": "michaeldavis@example.com",
-        "image": "michaeldavis.jpg",
-        "classes": [
-          "Piano Techniques",
-          "Advanced Piano Masterclass"
-        ]
-      },
-      {
-        "instructor_id": 4,
-        "name": "Sarah Adams",
-        "email": "sarahadams@example.com",
-        "image": "sarahadams.jpg",
-        "classes": [
-          "Singing for Beginners",
-          "Vocal Performance Workshop"
-        ]
-      },
-      {
-        "instructor_id": 5,
-        "name": "David Wilson",
-        "email": "davidwilson@example.com",
-        "image": "davidwilson.jpg",
-        "classes": [
-          "Music Production Essentials",
-          "Advanced Music Production"
-        ]
-      },
-      {
-        "instructor_id": 6,
-        "name": "Jennifer Lee",
-        "email": "jenniferlee@example.com",
-        "image": "jenniferlee.jpg",
-        "classes": [
-          "Violin Basics",
-          "Intermediate Violin Techniques"
-        ]
-      },
-      {
-        "instructor_id": 7,
-        "name": "Robert Johnson",
-        "email": "robertjohnson@example.com",
-        "image": "robertjohnson.jpg",
-        "classes": [
-          "Drumming Foundations",
-          "Advanced Drum Techniques"
-        ]
-      },
-      {
-        "instructor_id": 8,
-        "name": "Alexandra Lopez",
-        "email": "alexandralopez@example.com",
-        "image": "alexandralopez.jpg",
-        "classes": [
-          "Bass Guitar Fundamentals",
-          "Groove and Rhythm Techniques"
-        ]
-      },
-      {
-        "instructor_id": 9,
-        "name": "Matthew Turner",
-        "email": "matthewturner@example.com",
-        "image": "matthewturner.jpg",
-        "classes": [
-          "Songwriting Workshop",
-          "Lyric Writing Techniques"
-        ]
-      },
-      {
-        "instructor_id": 10,
-        "name": "Sophia Martinez",
-        "email": "sophiamartinez@example.com",
-        "image": "sophiamartinez.jpg",
-        "classes": [
-          "Jazz Improvisation",
-          "Latin Music Styles"
-        ]
-      }
-    ]
-  
+  {
+    "instructor_id": 1,
+    "name": "John Smith",
+    "email": "johnsmith@example.com",
+    "image": "https://i.ibb.co/BGMgbcK/young-woman-playing-synthesizer-home.jpg",
+    "number":6,
+    "classes": ["Introduction to Music Theory", "Advanced Music Theory","Fundamentals of Music Composition","Music Production Techniques","History of Western Classical Music","Jazz Theory and Improvisation"]
+  },
+  {
+    "instructor_id": 2,
+    "name": "Emily Johnson",
+    "email": "emilyjohnson@example.com",
+    "image": "https://i.ibb.co/jf6H922/young-woman-stiped-shirt-with-light-brown-skin-big-dark-eyes-posing-while-working-with-computer.jpg",
+    "number":5,
+    "classes": ["Guitar Fundamentals", "Intermediate Guitar Techniques","Fundamentals of Music Composition",
+    "Music Production Techniques",
+    "History of Western Classical Music"]
+  },
+  {
+    "instructor_id": 3,
+    "name": "Michael Davis",
+    "email": "michaeldavis@example.com",
+    "image": "https://i.ibb.co/jLfv6C3/charming-woman.jpg",
+    "number":6,
+    "classes": ["Piano Techniques", "Advanced Piano Masterclass","Jazz Theory and Improvisation",
+    "Music Business and Entrepreneurship",
+    "Songwriting and Lyricism",
+    "Music Technology and Digital Audio Production"]
+  },
+  {
+    "instructor_id": 4,
+    "name": "Sarah Adams",
+    "email": "sarahadams@example.com",
+    "image": "https://i.ibb.co/KyJsZpf/medium-shot-smiley-woman-wearing-headphones.jpg",
+    "number":4,
+    "classes": ["Singing for Beginners", "Vocal Performance Workshop",
+    "Songwriting and Lyricism",
+    "Music Technology and Digital Audio Production"]
+  },
+  {
+    "instructor_id": 5,
+    "name": "David Wilson",
+    "email": "davidwilson@example.com",
+    "image": "https://i.ibb.co/8mqrCgj/front-view-smiley-female-musician-playing-acoustic-guitar.jpg",
+    "number":5,
+    "classes": ["Music Production Essentials", "Advanced Music Production","Jazz Theory and Improvisation",
+    "Music and Society: Exploring Cultural Impact",
+    "Music Business and Entrepreneurship"]
+  },
+  {
+    "instructor_id": 6,
+    "name": "Jennifer Lee",
+    "email": "jenniferlee@example.com",
+    "image": "https://i.ibb.co/LrBHSXz/elearning-remotely-giving-violin-classes-home-young-cute-beautiful-girl-happy.jpg",
+    "number":6,
+    "classes": ["Violin Basics", "Intermediate Violin Techniques",
+    "Music and Society: Exploring Cultural Impact",
+    "Music Business and Entrepreneurship",
+    "Songwriting and Lyricism",
+    "Music Technology and Digital Audio Production"]
+  },
+  {
+    "instructor_id": 7,
+    "name": "Robert Johnson",
+    "email": "robertjohnson@example.com",
+    "image": "https://i.ibb.co/y0VS06G/woman-sitting-happily-with-laptop-table.jpg",
+    "number":3,
+    "classes": ["Drumming Foundations", "Advanced Drum Techniques",
+    "Music Technology and Digital Audio Production"]
+  },
+  {
+    "instructor_id": 8,
+    "name": "Alexandra Lopez",
+    "email": "alexandralopez@example.com",
+    "image": "https://i.ibb.co/fxZmKjp/young-blogger-recording-herself-playing-guitar.jpg",
+    "number":2,
+    "classes": ["Bass Guitar Fundamentals", "Groove and Rhythm Techniques"]
+  },
+  {
+    "instructor_id": 9,
+    "name": "Matthew Turner",
+    "email": "matthewturner@example.com",
+    "image": "https://i.ibb.co/KNvnWC9/emotional-portrait-woman-blogger-with-acoustic-guitar-shows-gesture-peace-camera.jpg",
+    "number":5,
+    "classes": ["Songwriting Workshop", "Lyric Writing Techniques","Jazz Theory and Improvisation",
+    "Songwriting and Lyricism",
+    "Music Technology and Digital Audio Production"]
+  },
+  {
+    "instructor_id": 10,
+    "name": "Sophia Martinez",
+    "email": "sophiamartinez@example.com",
+    "image": "https://i.ibb.co/ZmdkwGt/medium-shot-smiley-woman-holding-cup.jpg",
+    "number":5,
+    "classes": ["Jazz Improvisation", "Latin Music Styles",
+    "Music Business and Entrepreneurship",
+    "Songwriting and Lyricism",
+    "Music Technology and Digital Audio Production"]
+  }
+]

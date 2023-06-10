@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-10 items-center w-11/12 mx-auto my-4">
       <div>
-        <img src={img} alt="" />
+        <img className="rounded-xl" src={img} alt="" />
       </div>
       <div>
         <h1 className="section-title">About Us</h1>

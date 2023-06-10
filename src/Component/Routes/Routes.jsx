@@ -20,7 +20,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/classes',
-                element:<Classes></Classes>
+                element: <Classes></Classes>,
+                loader:()=>fetch('../../../public/classes.json')
             }
       ]
     },

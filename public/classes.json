@@ -1,0 +1,184 @@
+ [
+      {
+        "class_id": 1,
+        "class_name": "Introduction to Music Theory",
+        "instructor": "John Smith",
+        "duration": "4 weeks",
+        "level": "Beginner",
+        "description": "Learn the basics of music theory, including notation, scales, chords, and rhythm.",
+        "price": "$99"
+      },
+      {
+        "class_id": 2,
+        "class_name": "Guitar Fundamentals",
+        "instructor": "Emily Johnson",
+        "duration": "6 weeks",
+        "level": "Beginner",
+        "description": "Master the fundamentals of playing the guitar, including chords, strumming patterns, and basic music theory.",
+        "price": "$149"
+      },
+      {
+        "class_id": 3,
+        "class_name": "Piano Techniques",
+        "instructor": "Michael Davis",
+        "duration": "8 weeks",
+        "level": "Intermediate",
+        "description": "Explore advanced piano techniques such as scales, arpeggios, and playing with both hands.",
+        "price": "$199"
+      },
+      {
+        "class_id": 4,
+        "class_name": "Singing for Beginners",
+        "instructor": "Sarah Adams",
+        "duration": "4 weeks",
+        "level": "Beginner",
+        "description": "Discover the basics of singing, including breath control, vocal warm-ups, and simple melodies.",
+        "price": "$99"
+      },
+      {
+        "class_id": 5,
+        "class_name": "Music Production Essentials",
+        "instructor": "David Wilson",
+        "duration": "10 weeks",
+        "level": "Advanced",
+        "description": "Learn the fundamentals of music production, including recording, editing, mixing, and mastering.",
+        "price": "$249"
+      },
+      {
+        "class_id": 6,
+        "class_name": "Violin Basics",
+        "instructor": "Jennifer Lee",
+        "duration": "6 weeks",
+        "level": "Beginner",
+        "description": "Get started with violin playing, including proper technique, bowing, and basic music reading.",
+        "price": "$149"
+      },
+      {
+        "class_id": 7,
+        "class_name": "Drumming Foundations",
+        "instructor": "Robert Johnson",
+        "duration": "8 weeks",
+        "level": "Beginner",
+        "description": "Develop foundational drumming skills, including rudiments, beats, and basic rhythm patterns.",
+        "price": "$199"
+      },
+      {
+        "class_id": 8,
+        "class_name": "Bass Guitar Fundamentals",
+        "instructor": "Alexandra Lopez",
+        "duration": "6 weeks",
+        "level": "Beginner",
+        "description": "Learn the essentials of bass guitar playing, including techniques, scales, and grooves.",
+        "price": "$149"
+      },
+      {
+        "class_id": 9,
+        "class_name": "Songwriting Workshop",
+        "instructor": "Matthew Turner",
+        "duration": "4 weeks",
+        "level": "Intermediate",
+        "description": "Explore the art of songwriting, including lyric writing, melody creation, and song structure.",
+        "price": "$99"
+      },
+      {
+        "class_id": 10,
+        "class_name": "Jazz Improvisation",
+        "instructor": "Sophia Martinez",
+        "duration": "8 weeks",
+        "level": "Advanced",
+        "description": "Dive into the world of jazz improvisation, including scales, chord progressions, and soloing techniques.",
+        "price": "$199"
+      },
+      {
+        "class_id": 11,
+        "class_name": "Music History",
+        "instructor": "John Smith",
+        "duration": "6 weeks",
+        "level": "Intermediate",
+        "description": "Explore the evolution of music through history, from ancient civilizations to modern genres.",
+        "price": "$149"
+      },
+      {
+        "class_id": 12,
+        "class_name": "Advanced Guitar Techniques",
+        "instructor": "Emily Johnson",
+        "duration": "10 weeks",
+        "level": "Advanced",
+        "description": "Take your guitar playing to the next level with advanced techniques, including fingerstyle, improvisation, and complex chords.",
+        "price": "$249"
+      },
+      {
+        "class_id": 13,
+        "class_name": "Advanced Piano Masterclass",
+        "instructor": "Michael Davis",
+        "duration": "12 weeks",
+        "level": "Advanced",
+        "description": "Join a masterclass designed for advanced piano players, focusing on interpretation, expression, and advanced repertoire.",
+        "price": "$299"
+      },
+      {
+        "class_id": 14,
+        "class_name": "Vocal Performance Workshop",
+        "instructor": "Sarah Adams",
+        "duration": "6 weeks",
+        "level": "Intermediate",
+        "description": "Enhance your vocal performance skills through techniques like stage presence, vocal dynamics, and interpretation.",
+        "price": "$149"
+      },
+      {
+        "class_id": 15,
+        "class_name": "Electronic Music Production",
+        "instructor": "David Wilson",
+        "duration": "8 weeks",
+        "level": "Intermediate",
+        "description": "Learn the art of producing electronic music, including synthesizers, beat making, and arrangement.",
+        "price": "$199"
+      },
+      {
+        "class_id": 16,
+        "class_name": "Advanced Violin Techniques",
+        "instructor": "Jennifer Lee",
+        "duration": "10 weeks",
+        "level": "Advanced",
+        "description": "Refine your violin playing with advanced techniques, including vibrato, double stops, and virtuosic pieces.",
+        "price": "$249"
+      },
+      {
+        "class_id": 17,
+        "class_name": "Advanced Drumming Styles",
+        "instructor": "Robert Johnson",
+        "duration": "12 weeks",
+        "level": "Advanced",
+        "description": "Explore advanced drumming styles, including jazz, Latin, funk, and fusion.",
+        "price": "$299"
+      },
+      {
+        "class_id": 18,
+        "class_name": "Intermediate Bass Grooves",
+        "instructor": "Alexandra Lopez",
+        "duration": "8 weeks",
+        "level": "Intermediate",
+        "description": "Expand your bass playing with intermediate grooves, scales, and advanced rhythmic patterns.",
+        "price": "$199"
+      },
+      {
+        "class_id": 19,
+        "class_name": "Lyric Writing Techniques",
+        "instructor": "Matthew Turner",
+        "duration": "6 weeks",
+        "level": "Intermediate",
+        "description": "Discover effective techniques for writing engaging and impactful lyrics for your songs.",
+        "price": "$149"
+      },
+      {
+        "class_id": 20,
+        "class_name": "Latin Music Styles",
+        "instructor": "Sophia Martinez",
+        "duration": "6 weeks",
+        "level": "Advanced",
+        "description": "Refine your violin playing with advanced techniques, including vibrato, double stops, and virtuosic pieces.",
+        "price": "$249"
+      }
+    ]
+       
+  

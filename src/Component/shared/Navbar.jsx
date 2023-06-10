@@ -26,22 +26,15 @@ const Navbar = () => {
                     <Link><img className='w-48' src={logo} alt="" /></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li tabIndex={0}>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
+    <ul className="menu menu-horizontal px-1 font-bold text-lg">
+      <li><Link to={'/'}>Home</Link></li>
+            <li><Link to={'/instructors'}>Instructors</Link></li>
+            <li><Link to={'/classes'}>Classes</Link></li>
+            <li><Link to={'/dashboard'}>Dashboard</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">Login</a>
   </div>
 </div>
         </div>

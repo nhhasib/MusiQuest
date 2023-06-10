@@ -1,0 +1,103 @@
+[
+      {
+        "instructor_id": 1,
+        "name": "John Smith",
+        "email": "johnsmith@example.com",
+        "image": "johnsmith.jpg",
+        "classes": [
+          "Introduction to Music Theory",
+          "Advanced Music Theory"
+        ]
+      },
+      {
+        "instructor_id": 2,
+        "name": "Emily Johnson",
+        "email": "emilyjohnson@example.com",
+        "image": "emilyjohnson.jpg",
+        "classes": [
+          "Guitar Fundamentals",
+          "Intermediate Guitar Techniques"
+        ]
+      },
+      {
+        "instructor_id": 3,
+        "name": "Michael Davis",
+        "email": "michaeldavis@example.com",
+        "image": "michaeldavis.jpg",
+        "classes": [
+          "Piano Techniques",
+          "Advanced Piano Masterclass"
+        ]
+      },
+      {
+        "instructor_id": 4,
+        "name": "Sarah Adams",
+        "email": "sarahadams@example.com",
+        "image": "sarahadams.jpg",
+        "classes": [
+          "Singing for Beginners",
+          "Vocal Performance Workshop"
+        ]
+      },
+      {
+        "instructor_id": 5,
+        "name": "David Wilson",
+        "email": "davidwilson@example.com",
+        "image": "davidwilson.jpg",
+        "classes": [
+          "Music Production Essentials",
+          "Advanced Music Production"
+        ]
+      },
+      {
+        "instructor_id": 6,
+        "name": "Jennifer Lee",
+        "email": "jenniferlee@example.com",
+        "image": "jenniferlee.jpg",
+        "classes": [
+          "Violin Basics",
+          "Intermediate Violin Techniques"
+        ]
+      },
+      {
+        "instructor_id": 7,
+        "name": "Robert Johnson",
+        "email": "robertjohnson@example.com",
+        "image": "robertjohnson.jpg",
+        "classes": [
+          "Drumming Foundations",
+          "Advanced Drum Techniques"
+        ]
+      },
+      {
+        "instructor_id": 8,
+        "name": "Alexandra Lopez",
+        "email": "alexandralopez@example.com",
+        "image": "alexandralopez.jpg",
+        "classes": [
+          "Bass Guitar Fundamentals",
+          "Groove and Rhythm Techniques"
+        ]
+      },
+      {
+        "instructor_id": 9,
+        "name": "Matthew Turner",
+        "email": "matthewturner@example.com",
+        "image": "matthewturner.jpg",
+        "classes": [
+          "Songwriting Workshop",
+          "Lyric Writing Techniques"
+        ]
+      },
+      {
+        "instructor_id": 10,
+        "name": "Sophia Martinez",
+        "email": "sophiamartinez@example.com",
+        "image": "sophiamartinez.jpg",
+        "classes": [
+          "Jazz Improvisation",
+          "Latin Music Styles"
+        ]
+      }
+    ]
+  

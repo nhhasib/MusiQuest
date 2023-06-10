@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  html {
+    font-family: Archivo, system-ui, sans-serif;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800;900&display=swap');
+
+
+body{
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Cairo', sans-serif;
+}
+.text-clr-primary{
+color: #f47621
+}
+.bg-clr-primary{
+background-color: #f47621;
+}
+.button{
+  background-color: #f47621;
+  padding:12px 18px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.button:hover{
+  background-color: #f44206;
+}
+.section-title{
+  font-weight: 800;
+  font-size: 36px;
+}

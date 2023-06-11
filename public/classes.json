@@ -6,7 +6,9 @@
         "duration": "4 weeks",
         "level": "Beginner",
         "description": "Learn the basics of music theory, including notation, scales, chords, and rhythm.",
-        "price": "$99"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 99
       },
       {
         "id": 2,
@@ -15,7 +17,9 @@
         "duration": "6 weeks",
         "level": "Beginner",
         "description": "Master the fundamentals of playing the guitar, including chords, strumming patterns, and basic music theory.",
-        "price": "$149"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 149
       },
       {
         "id": 3,
@@ -24,7 +28,9 @@
         "duration": "8 weeks",
         "level": "Intermediate",
         "description": "Explore advanced piano techniques such as scales, arpeggios, and playing with both hands.",
-        "price": "$199"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 199
       },
       {
         "id": 4,
@@ -33,7 +39,9 @@
         "duration": "4 weeks",
         "level": "Beginner",
         "description": "Discover the basics of singing, including breath control, vocal warm-ups, and simple melodies.",
-        "price": "$99"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 99
       },
       {
         "id": 5,
@@ -42,7 +50,9 @@
         "duration": "10 weeks",
         "level": "Advanced",
         "description": "Learn the fundamentals of music production, including recording, editing, mixing, and mastering.",
-        "price": "$249"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 249
       },
       {
         "id": 6,
@@ -51,7 +61,9 @@
         "duration": "6 weeks",
         "level": "Beginner",
         "description": "Get started with violin playing, including proper technique, bowing, and basic music reading.",
-        "price": "$149"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 149
       },
       {
         "id": 7,
@@ -60,7 +72,9 @@
         "duration": "8 weeks",
         "level": "Beginner",
         "description": "Develop foundational drumming skills, including rudiments, beats, and basic rhythm patterns.",
-        "price": "$199"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 199
       },
       {
         "id": 8,
@@ -69,7 +83,9 @@
         "duration": "6 weeks",
         "level": "Beginner",
         "description": "Learn the essentials of bass guitar playing, including techniques, scales, and grooves.",
-        "price": "$149"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 149
       },
       {
         "id": 9,
@@ -78,7 +94,9 @@
         "duration": "4 weeks",
         "level": "Intermediate",
         "description": "Explore the art of songwriting, including lyric writing, melody creation, and song structure.",
-        "price": "$99"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 99
       },
       {
         "id": 10,
@@ -87,7 +105,9 @@
         "duration": "8 weeks",
         "level": "Advanced",
         "description": "Dive into the world of jazz improvisation, including scales, chord progressions, and soloing techniques.",
-        "price": "$199"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 199
       },
       {
         "id": 11,
@@ -96,7 +116,9 @@
         "duration": "6 weeks",
         "level": "Intermediate",
         "description": "Explore the evolution of music through history, from ancient civilizations to modern genres.",
-        "price": "$149"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 149
       },
       {
         "id": 12,
@@ -105,7 +127,9 @@
         "duration": "10 weeks",
         "level": "Advanced",
         "description": "Take your guitar playing to the next level with advanced techniques, including fingerstyle, improvisation, and complex chords.",
-        "price": "$249"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 249
       },
       {
         "id": 13,
@@ -114,7 +138,9 @@
         "duration": "12 weeks",
         "level": "Advanced",
         "description": "Join a masterclass designed for advanced piano players, focusing on interpretation, expression, and advanced repertoire.",
-        "price": "$299"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 299
       },
       {
         "id": 14,
@@ -123,7 +149,9 @@
         "duration": "6 weeks",
         "level": "Intermediate",
         "description": "Enhance your vocal performance skills through techniques like stage presence, vocal dynamics, and interpretation.",
-        "price": "$149"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 149
       },
       {
         "id": 15,
@@ -132,7 +160,9 @@
         "duration": "8 weeks",
         "level": "Intermediate",
         "description": "Learn the art of producing electronic music, including synthesizers, beat making, and arrangement.",
-        "price": "$199"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 199
       },
       {
         "id": 16,
@@ -141,7 +171,9 @@
         "duration": "10 weeks",
         "level": "Advanced",
         "description": "Refine your violin playing with advanced techniques, including vibrato, double stops, and virtuosic pieces.",
-        "price": "$249"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 249
       },
       {
         "id": 17,
@@ -150,7 +182,9 @@
         "duration": "12 weeks",
         "level": "Advanced",
         "description": "Explore advanced drumming styles, including jazz, Latin, funk, and fusion.",
-        "price": "$299"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 299
       },
       {
         "id": 18,
@@ -159,7 +193,9 @@
         "duration": "8 weeks",
         "level": "Intermediate",
         "description": "Expand your bass playing with intermediate grooves, scales, and advanced rhythmic patterns.",
-        "price": "$199"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 199
       },
       {
         "id": 19,
@@ -168,7 +204,9 @@
         "duration": "6 weeks",
         "level": "Intermediate",
         "description": "Discover effective techniques for writing engaging and impactful lyrics for your songs.",
-        "price": "$149"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 149
       },
       {
         "id": 20,
@@ -177,7 +215,9 @@
         "duration": "6 weeks",
         "level": "Advanced",
         "description": "Refine your violin playing with advanced techniques, including vibrato, double stops, and virtuosic pieces.",
-        "price": "$249"
+        "available":200,
+        "image":"https://i.ibb.co/DRnJvFN/side-view-teacher-playing-piano.jpg",
+        "price": 249
       }
     ]
        

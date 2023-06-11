@@ -9,7 +9,7 @@ const Classes = () => {
     return (
         <div>
             <SectionHeader img={img} title={'Classes'}></SectionHeader>
-            <div>
+            <div className='grid grid-cols-3 gap-6 w-11/12 mx-auto'>
                 {
                     classes.map(c=><ClassCard key={c.id} data={c}></ClassCard>)
                 }

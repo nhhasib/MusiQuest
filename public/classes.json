@@ -1,7 +1,7 @@
  [
       {
-        "class_id": 1,
-        "class_name": "Introduction to Music Theory",
+        "id": 1,
+        "name": "Introduction to Music Theory",
         "instructor": "John Smith",
         "duration": "4 weeks",
         "level": "Beginner",
@@ -9,8 +9,8 @@
         "price": "$99"
       },
       {
-        "class_id": 2,
-        "class_name": "Guitar Fundamentals",
+        "id": 2,
+        "name": "Guitar Fundamentals",
         "instructor": "Emily Johnson",
         "duration": "6 weeks",
         "level": "Beginner",
@@ -18,8 +18,8 @@
         "price": "$149"
       },
       {
-        "class_id": 3,
-        "class_name": "Piano Techniques",
+        "id": 3,
+        "name": "Piano Techniques",
         "instructor": "Michael Davis",
         "duration": "8 weeks",
         "level": "Intermediate",
@@ -27,8 +27,8 @@
         "price": "$199"
       },
       {
-        "class_id": 4,
-        "class_name": "Singing for Beginners",
+        "id": 4,
+        "name": "Singing for Beginners",
         "instructor": "Sarah Adams",
         "duration": "4 weeks",
         "level": "Beginner",
@@ -36,8 +36,8 @@
         "price": "$99"
       },
       {
-        "class_id": 5,
-        "class_name": "Music Production Essentials",
+        "id": 5,
+        "name": "Music Production Essentials",
         "instructor": "David Wilson",
         "duration": "10 weeks",
         "level": "Advanced",
@@ -45,8 +45,8 @@
         "price": "$249"
       },
       {
-        "class_id": 6,
-        "class_name": "Violin Basics",
+        "id": 6,
+        "name": "Violin Basics",
         "instructor": "Jennifer Lee",
         "duration": "6 weeks",
         "level": "Beginner",
@@ -54,8 +54,8 @@
         "price": "$149"
       },
       {
-        "class_id": 7,
-        "class_name": "Drumming Foundations",
+        "id": 7,
+        "name": "Drumming Foundations",
         "instructor": "Robert Johnson",
         "duration": "8 weeks",
         "level": "Beginner",
@@ -63,8 +63,8 @@
         "price": "$199"
       },
       {
-        "class_id": 8,
-        "class_name": "Bass Guitar Fundamentals",
+        "id": 8,
+        "name": "Bass Guitar Fundamentals",
         "instructor": "Alexandra Lopez",
         "duration": "6 weeks",
         "level": "Beginner",
@@ -72,8 +72,8 @@
         "price": "$149"
       },
       {
-        "class_id": 9,
-        "class_name": "Songwriting Workshop",
+        "id": 9,
+        "name": "Songwriting Workshop",
         "instructor": "Matthew Turner",
         "duration": "4 weeks",
         "level": "Intermediate",
@@ -81,8 +81,8 @@
         "price": "$99"
       },
       {
-        "class_id": 10,
-        "class_name": "Jazz Improvisation",
+        "id": 10,
+        "name": "Jazz Improvisation",
         "instructor": "Sophia Martinez",
         "duration": "8 weeks",
         "level": "Advanced",
@@ -90,8 +90,8 @@
         "price": "$199"
       },
       {
-        "class_id": 11,
-        "class_name": "Music History",
+        "id": 11,
+        "name": "Music History",
         "instructor": "John Smith",
         "duration": "6 weeks",
         "level": "Intermediate",
@@ -99,8 +99,8 @@
         "price": "$149"
       },
       {
-        "class_id": 12,
-        "class_name": "Advanced Guitar Techniques",
+        "id": 12,
+        "name": "Advanced Guitar Techniques",
         "instructor": "Emily Johnson",
         "duration": "10 weeks",
         "level": "Advanced",
@@ -108,8 +108,8 @@
         "price": "$249"
       },
       {
-        "class_id": 13,
-        "class_name": "Advanced Piano Masterclass",
+        "id": 13,
+        "name": "Advanced Piano Masterclass",
         "instructor": "Michael Davis",
         "duration": "12 weeks",
         "level": "Advanced",
@@ -117,8 +117,8 @@
         "price": "$299"
       },
       {
-        "class_id": 14,
-        "class_name": "Vocal Performance Workshop",
+        "id": 14,
+        "name": "Vocal Performance Workshop",
         "instructor": "Sarah Adams",
         "duration": "6 weeks",
         "level": "Intermediate",
@@ -126,8 +126,8 @@
         "price": "$149"
       },
       {
-        "class_id": 15,
-        "class_name": "Electronic Music Production",
+        "id": 15,
+        "name": "Electronic Music Production",
         "instructor": "David Wilson",
         "duration": "8 weeks",
         "level": "Intermediate",
@@ -135,8 +135,8 @@
         "price": "$199"
       },
       {
-        "class_id": 16,
-        "class_name": "Advanced Violin Techniques",
+        "id": 16,
+        "name": "Advanced Violin Techniques",
         "instructor": "Jennifer Lee",
         "duration": "10 weeks",
         "level": "Advanced",
@@ -144,8 +144,8 @@
         "price": "$249"
       },
       {
-        "class_id": 17,
-        "class_name": "Advanced Drumming Styles",
+        "id": 17,
+        "name": "Advanced Drumming Styles",
         "instructor": "Robert Johnson",
         "duration": "12 weeks",
         "level": "Advanced",
@@ -153,8 +153,8 @@
         "price": "$299"
       },
       {
-        "class_id": 18,
-        "class_name": "Intermediate Bass Grooves",
+        "id": 18,
+        "name": "Intermediate Bass Grooves",
         "instructor": "Alexandra Lopez",
         "duration": "8 weeks",
         "level": "Intermediate",
@@ -162,8 +162,8 @@
         "price": "$199"
       },
       {
-        "class_id": 19,
-        "class_name": "Lyric Writing Techniques",
+        "id": 19,
+        "name": "Lyric Writing Techniques",
         "instructor": "Matthew Turner",
         "duration": "6 weeks",
         "level": "Intermediate",
@@ -171,8 +171,8 @@
         "price": "$149"
       },
       {
-        "class_id": 20,
-        "class_name": "Latin Music Styles",
+        "id": 20,
+        "name": "Latin Music Styles",
         "instructor": "Sophia Martinez",
         "duration": "6 weeks",
         "level": "Advanced",

@@ -7,17 +7,23 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser,updateUser } = useContext(AuthContext)
 
     const handleRegister = (event) => {
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
-        const password=form.password.value
+        const password = form.password.value;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const gander = form.gander.value;
+        const number = form.number.value;
+        const address = form.address.value;
         createUser(email,password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                updateUser(name,photo,gander,number,address)
+                
             })
             .catch(error=>console.log(error))
         
@@ -40,7 +46,8 @@ const Register = () => {
                   <span className="label-text">Name</span>
                 </label>
                 <input
-                  type="text"
+                                      type="text"
+                                      name="name"
                   placeholder="Enter your name"
                   className="input input-bordered"
                 />
@@ -73,7 +80,8 @@ const Register = () => {
                     <span className="label-text">Photo URL</span>
                   </label>
                   <input
-                    type="url"
+                                          type="url"
+                                          name="photo"
                     placeholder="Enter your Photo link"
                     className="input input-bordered"
                   />
@@ -85,7 +93,8 @@ const Register = () => {
                     <span className="label-text">Gander</span>
                   </label>
                   <input
-                    type="text"
+                                          type="text"
+                                          name="gander"
                     placeholder="Enter Gender"
                     className="input input-bordered"
                   />
@@ -96,17 +105,19 @@ const Register = () => {
                   <span className="label-text">Phone Number</span>
                 </label>
                 <input
-                  type="number"
+                                      type="number"
+                                      name="number"
                   placeholder="Enter your Phone Number"
                   className="input input-bordered"
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Adress</span>
+                  <span className="label-text">Address</span>
                 </label>
                 <input
-                  type="text"
+                                      type="text"
+                                      name="address"
                   placeholder="Enter your address"
                   className="input input-bordered"
                 />

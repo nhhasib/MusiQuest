@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const SocialMediaLogin = () => {
-    // const { googleLogin } = useContext(AuthContext);
+    const { googleLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
   
@@ -25,15 +25,16 @@ const SocialMediaLogin = () => {
               body: JSON.stringify(saveUser)
             })
               .then(res => res.json())
-              .then(() => {
-
-                    Swal.fire({
-                      position: 'top-end',
-                      icon: 'success',
-                      title: 'User created and login successfully.',
-                      showConfirmButton: false,
-                      timer: 1500
-                    });
+                .then(data => {
+                    if (data.insertedId) {
+                        Swal.fire({
+                          position: 'top-end',
+                          icon: 'success',
+                          title: 'User created and login successfully.',
+                          showConfirmButton: false,
+                          timer: 1500
+                        });
+                  }
                     navigate('/');
                   }
             )
@@ -46,7 +47,7 @@ const SocialMediaLogin = () => {
     return (
         <div className="flex flex-col mx-auto text-center items-center my-4">
         <div className="gap-4 flex m-2">
-          <button className="border-2 border-black rounded-full p-2">
+          <button onClick={handleGoogleLogin} className="border-2 border-black rounded-full p-2">
             <p className="text-2xl">
               <FaGoogle></FaGoogle>
             </p>

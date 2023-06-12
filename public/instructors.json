@@ -1,6 +1,5 @@
 [
   {
-    "instructor_id": 1,
     "name": "John Smith",
     "email": "johnsmith@example.com",
     "image": "https://i.ibb.co/BGMgbcK/young-woman-playing-synthesizer-home.jpg",
@@ -8,7 +7,6 @@
     "classes": ["Introduction to Music Theory", "Advanced Music Theory","Fundamentals of Music Composition","Music Production Techniques","History of Western Classical Music","Jazz Theory and Improvisation"]
   },
   {
-    "instructor_id": 2,
     "name": "Emily Johnson",
     "email": "emilyjohnson@example.com",
     "image": "https://i.ibb.co/jf6H922/young-woman-stiped-shirt-with-light-brown-skin-big-dark-eyes-posing-while-working-with-computer.jpg",
@@ -18,7 +16,6 @@
     "History of Western Classical Music"]
   },
   {
-    "instructor_id": 3,
     "name": "Michael Davis",
     "email": "michaeldavis@example.com",
     "image": "https://i.ibb.co/jLfv6C3/charming-woman.jpg",
@@ -29,7 +26,6 @@
     "Music Technology and Digital Audio Production"]
   },
   {
-    "instructor_id": 4,
     "name": "Sarah Adams",
     "email": "sarahadams@example.com",
     "image": "https://i.ibb.co/KyJsZpf/medium-shot-smiley-woman-wearing-headphones.jpg",
@@ -39,7 +35,6 @@
     "Music Technology and Digital Audio Production"]
   },
   {
-    "instructor_id": 5,
     "name": "David Wilson",
     "email": "davidwilson@example.com",
     "image": "https://i.ibb.co/8mqrCgj/front-view-smiley-female-musician-playing-acoustic-guitar.jpg",
@@ -49,7 +44,6 @@
     "Music Business and Entrepreneurship"]
   },
   {
-    "instructor_id": 6,
     "name": "Jennifer Lee",
     "email": "jenniferlee@example.com",
     "image": "https://i.ibb.co/LrBHSXz/elearning-remotely-giving-violin-classes-home-young-cute-beautiful-girl-happy.jpg",
@@ -61,7 +55,6 @@
     "Music Technology and Digital Audio Production"]
   },
   {
-    "instructor_id": 7,
     "name": "Robert Johnson",
     "email": "robertjohnson@example.com",
     "image": "https://i.ibb.co/y0VS06G/woman-sitting-happily-with-laptop-table.jpg",
@@ -70,7 +63,6 @@
     "Music Technology and Digital Audio Production"]
   },
   {
-    "instructor_id": 8,
     "name": "Alexandra Lopez",
     "email": "alexandralopez@example.com",
     "image": "https://i.ibb.co/fxZmKjp/young-blogger-recording-herself-playing-guitar.jpg",
@@ -78,7 +70,6 @@
     "classes": ["Bass Guitar Fundamentals", "Groove and Rhythm Techniques"]
   },
   {
-    "instructor_id": 9,
     "name": "Matthew Turner",
     "email": "matthewturner@example.com",
     "image": "https://i.ibb.co/KNvnWC9/emotional-portrait-woman-blogger-with-acoustic-guitar-shows-gesture-peace-camera.jpg",
@@ -88,7 +79,6 @@
     "Music Technology and Digital Audio Production"]
   },
   {
-    "instructor_id": 10,
     "name": "Sophia Martinez",
     "email": "sophiamartinez@example.com",
     "image": "https://i.ibb.co/ZmdkwGt/medium-shot-smiley-woman-holding-cup.jpg",

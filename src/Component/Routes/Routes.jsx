@@ -9,6 +9,9 @@ import DMain from "../pages/Dashboard/Layout/DMain";
 import DHome from "../pages/Dashboard/home/DHome";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import SelectedClass from "../pages/Dashboard/SelectedClass/SelectedClass";
+import EnrolledClass from "../pages/Dashboard/EnrolledClass/EnrolledClass";
+import AddClass from "../pages/Dashboard/addClass/AddClass";
+import MyClass from "../pages/Dashboard/myClass/MyClass";
 
 export const router = createBrowserRouter(
     [
@@ -54,6 +57,18 @@ export const router = createBrowserRouter(
                 {
                     path: 'selectedClass',
                     element:<SelectedClass></SelectedClass>
+                },
+                {
+                    path: 'enrolledClass',
+                    element:<EnrolledClass></EnrolledClass>
+                },
+                {
+                    path: 'addClass',
+                    element:<AddClass></AddClass>
+                },
+                {
+                    path: 'myClass',
+                    element:<MyClass></MyClass>
                 }
             ]
         }

@@ -48,6 +48,15 @@ const DMain = () => {
                       <li>
             <Link to={'selectedClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Selected Classes</p></Link>
                       </li>
+                      <li>
+            <Link to={'enrolledClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Enrolled Classes</p></Link>
+                      </li>
+                      <li>
+            <Link to={'addClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Add Class</p></Link>
+                      </li>
+                      <li>
+            <Link to={'myClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">My Classes</p></Link>
+                      </li>
                       <hr className="my-8" />
                       <li>
             <Link to={'/'}><FaHome className="text-orange-500"></FaHome><p className="font-bold text-sm">Home</p></Link>

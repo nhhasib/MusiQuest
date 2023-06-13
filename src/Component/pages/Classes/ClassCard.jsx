@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const ClassCard = ({ data }) => {
-    console.log(data)
-    const { id, name, description, instructor, level, price, available, image } = data;
-    
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+    const { _id, name, description, instructor, level, price, available, image } = data;
+    console.log(_id)
     const handleEnroll = item => { 
-        console.log(item)
         if (user && user.email) {
-          const orderItem={menuItemId:_id,name,image,price,recipe,email:user.email}
-          fetch('http://localhost:5000/carts', {
+          const enrolledItem={courseId:_id,name,image,price,instructor,email:user.email}
+          fetch('http://localhost:5000/selectedClass', {
             method: 'POST',
             headers: {
               'content-type':'application/json'
           },
-            body:JSON.stringify(orderItem)
+            body:JSON.stringify(enrolledItem)
           })
             .then(res => res.json())
             .then(data => {
               if (data.insertedId) {
-                refetch();
+                // refetch();
                 Swal.fire({
                   position: 'top-center',
                   icon: 'success',

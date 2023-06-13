@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import DMain from "../pages/Dashboard/Layout/DMain";
 import DHome from "../pages/Dashboard/home/DHome";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import SelectedClass from "../pages/Dashboard/SelectedClass/SelectedClass";
 
 export const router = createBrowserRouter(
     [
@@ -27,7 +28,6 @@ export const router = createBrowserRouter(
             {
                 path: '/classes',
                 element: <Classes></Classes>,
-                loader:()=>fetch('../../../public/classes.json')
             },
             {
                 path: '/login',
@@ -50,6 +50,10 @@ export const router = createBrowserRouter(
                 {
                     path: 'allusers',
                     element: <AllUsers></AllUsers>,
+                },
+                {
+                    path: 'selectedClass',
+                    element:<SelectedClass></SelectedClass>
                 }
             ]
         }

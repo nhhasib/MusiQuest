@@ -9,7 +9,6 @@ const AllUsers = () => {
     })
 
     const handleAdmin = (user) => {
-        console.log(user.email,'hitted')
         fetch(`http://localhost:5000/users/admin/${user._id}`,
             { method: 'PATCH' })
             .then(res => res.json())
@@ -27,8 +26,23 @@ const AllUsers = () => {
                 }
         })
     }
-    const handleInstructor = () => {
-        
+    const handleInstructor = (user) => {
+        fetch(`http://localhost:5000/users/instructors/${user._id}`,
+            { method: 'PATCH' })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.modifiedCount){
+                    refetch()
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: `${user.name} make instructor successfully`,
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                }
+        })
     }
     return (
         <div className='w-11/12 mx-auto'>

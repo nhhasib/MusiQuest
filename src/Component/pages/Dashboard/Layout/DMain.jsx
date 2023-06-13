@@ -45,6 +45,9 @@ const DMain = () => {
             <li>
             <Link to={'allusers'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Manage Users</p></Link>
                       </li>
+                      <li>
+            <Link to={'selectedClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Selected Classes</p></Link>
+                      </li>
                       <hr className="my-8" />
                       <li>
             <Link to={'/'}><FaHome className="text-orange-500"></FaHome><p className="font-bold text-sm">Home</p></Link>
@@ -55,6 +58,7 @@ const DMain = () => {
                       <li>
                       <Link to={'/instructors'}><FaUserTie className="text-orange-500"></FaUserTie><p className="font-bold text-sm">All Instructors</p></Link>
                       </li>
+                      <button className="button">Logout</button>
           </ul>
         </div>
       </div>

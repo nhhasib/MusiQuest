@@ -4,21 +4,10 @@ import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import useSelectedClasses from "../../../Hooks/useSelectedClasses";
 
 const SelectedClass = () => {
-  const { user } = useContext(AuthContext);
-  const token = localStorage.getItem('access-token');
-  const { data: selectedClasses,refetch = [] } = useQuery(
-    ["selectedClass", user?.email],
-    async () => {
-      const res = await fetch(
-        `http://localhost:5000/selectedClass/?email=${user?.email}`,{ headers: {
-          authorization: `bearer ${token}`
-      }}
-      );
-      return res.json();
-    }
-  );
+  const [selectedClasses,refetch]=useSelectedClasses()
 
   // const { name, price, instructor } = selectedClasses;
 

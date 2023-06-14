@@ -7,11 +7,14 @@ import { Link } from "react-router-dom";
 
 const SelectedClass = () => {
   const { user } = useContext(AuthContext);
+  const token = localStorage.getItem('access-token');
   const { data: selectedClasses,refetch = [] } = useQuery(
     ["selectedClass", user?.email],
     async () => {
       const res = await fetch(
-        `http://localhost:5000/selectedClass/?email=${user?.email}`
+        `http://localhost:5000/selectedClass/?email=${user?.email}`,{ headers: {
+          authorization: `bearer ${token}`
+      }}
       );
       return res.json();
     }

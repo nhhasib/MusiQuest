@@ -1,17 +1,19 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 
 const MyClass = () => {
     const { user } = useContext(AuthContext);
+    const token = localStorage.getItem('access-token');
   const { data: myClasses=[],refetch } = useQuery(
     ["myClass", user?.email],
     async () => {
       const res = await fetch(
-        `http://localhost:5000/myClass/?email=${user?.email}`
+        `http://localhost:5000/myClass/?email=${user?.email}`,{ headers: {
+                    authorization: `bearer ${token}`
+                }}
       );
       return res.json();
     }

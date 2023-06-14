@@ -2,7 +2,6 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import React, { useContext, useEffect, useState } from 'react';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
-import useSelectedClasses from '../../../Hooks/useSelectedClasses';
 import Swal from 'sweetalert2';
 
 const CheckOutForm = ({price,selectedClasses}) => {
@@ -16,11 +15,13 @@ const CheckOutForm = ({price,selectedClasses}) => {
   const [transactionId, setTransactionId] = useState('');
 
   useEffect(() => {
-    axiosSecure.post('/create-payment-intent', { price })
+    if (price > 0) {
+      axiosSecure.post('/create-payment-intent', { price })
       .then(res => {
         console.log(res.data.clientSecret)
         setClientSecret(res.data.clientSecret)
     })
+    }
   },[price,axiosSecure])
 
     const handleSubmit = async (event) => {

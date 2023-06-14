@@ -6,7 +6,6 @@ import Classes from "../pages/Classes/Classes";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import DMain from "../pages/Dashboard/Layout/DMain";
-import DHome from "../pages/Dashboard/home/DHome";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import SelectedClass from "../pages/Dashboard/SelectedClass/SelectedClass";
 import EnrolledClass from "../pages/Dashboard/EnrolledClass/EnrolledClass";
@@ -14,6 +13,8 @@ import AddClass from "../pages/Dashboard/addClass/AddClass";
 import MyClass from "../pages/Dashboard/myClass/MyClass";
 import PrivateRoute from "./PrivateRoute";
 import Payment from "../pages/Dashboard/payment/Payment";
+import ManageClass from "../pages/Dashboard/manageClass/ManageClass";
+import Error from "../pages/Error/Error";
 
 export const router = createBrowserRouter(
     [
@@ -49,8 +50,8 @@ export const router = createBrowserRouter(
             element: <PrivateRoute><DMain></DMain></PrivateRoute>,
             children: [
                 {
-                    path: '/dashboard',
-                    element:<DHome></DHome>
+                    path: 'manageClass',
+                    element:<ManageClass></ManageClass>
                 },
                 {
                     path: 'allusers',
@@ -77,5 +78,9 @@ export const router = createBrowserRouter(
                     element:<MyClass></MyClass>
                 }
             ]
+        },
+        {
+            path: '*',
+            element:<Error></Error>
         }
   ]);

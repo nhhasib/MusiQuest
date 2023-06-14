@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
 import Swal from "sweetalert2";
 
 const AllUsers = () => {
-  const { data: users = [], refetch } = useQuery(["users"], async () => {
-    const res = await fetch("http://localhost:5000/users");
+  const { data: users = [], refetch } = useQuery(["allUsers"], async () => {
+    const res = await fetch("http://localhost:5000/allUsers");
     return res.json();
   });
 
@@ -44,16 +43,37 @@ const AllUsers = () => {
         }
       });
   };
+
+  const handleStudent = (user) => {
+    fetch(`http://localhost:5000/users/students/${user._id}`, {
+      method: "PATCH",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          refetch();
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: `${user.name} make student successfully`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
+  }
   return (
     <div className="w-11/12 mx-auto">
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
-            <tr>
+            <tr className="text-lg">
               <th></th>
               <th>Name</th>
               <th>Email</th>
-              <th>User Role || Change Role</th>
+              <th>User Role</th>
+              <th>Change Role</th>
             </tr>
           </thead>
           <tbody>
@@ -62,31 +82,45 @@ const AllUsers = () => {
                 <th>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
+                <td>{user.role=="admin"?'Admin':user.role=='instructor'?'Instructor':'Student'}</td>
                 <td>
                   <div className="flex items-center gap-4">
                     {user.role == "admin" ? (
                       <div className="flex gap-4 items-center">
-                        <p>Admin</p>
+                       
                       <button
                           onClick={() => handleInstructor(user)}
                           className="button"
                         >
                           Instructor
                         </button>
+                      <button
+                          onClick={() => handleStudent(user)}
+                          className="button"
+                        >
+                          Student
+                        </button>
+                        
                       </div>
                     ) : user.role === "instructor" ? (
                       <div className="flex gap-4 items-center">
-                        <p>Instructor</p>
+                       
                         <button
                           onClick={() => handleAdmin(user)}
                           className="button"
                         >
                           Admin
+                          </button>
+                          <button
+                          onClick={() => handleStudent(user)}
+                          className="button"
+                        >
+                          Student
                         </button>
                       </div>
                     ) : (
                       <div className="flex gap-4 items-center">
-                        <p>Student</p>
+                       
                         <button
                           onClick={() => handleAdmin(user)}
                           className="button"

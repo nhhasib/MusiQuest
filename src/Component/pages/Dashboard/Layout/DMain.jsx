@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from '../../../../assets/logo.png'
 import { FaBookReader, FaHome, FaUserFriends, FaUserGraduate, FaUserTie, FaUsers } from "react-icons/fa";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import { useQuery } from "@tanstack/react-query";
+import useUser from "../../../Hooks/useUser";
 
 const DMain = () => {
+  const [currentUserStatus] = useUser();
+  console.log(currentUserStatus)
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -38,25 +43,27 @@ const DMain = () => {
           <ul className="menu p-4 w-60 h-full bg-black text-white">
                       {/* Sidebar content here */}
                       <li><Link to={'/'}><img className="w-[160px]" src={logo} alt="" /></Link></li>
-                      <li>
                      <hr /> 
-              <Link><FaBookReader className="text-orange-500"></FaBookReader><p className="font-bold text-sm">Manage Classes</p></Link>
+            {
+              currentUserStatus?.role=='admin'?<><li>
+              <Link to={'manageClass'}><FaBookReader className="text-orange-500"></FaBookReader><p className="font-bold text-sm">Manage Classes</p></Link>
             </li>
             <li>
             <Link to={'allusers'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Manage Users</p></Link>
-                      </li>
-                      <li>
-            <Link to={'selectedClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Selected Classes</p></Link>
-                      </li>
-                      <li>
-            <Link to={'enrolledClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Enrolled Classes</p></Link>
-                      </li>
-                      <li>
+                      </li></>:currentUserStatus?.role=='instructor'?<><li>
             <Link to={'addClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Add Class</p></Link>
                       </li>
                       <li>
             <Link to={'myClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">My Classes</p></Link>
+                      </li></>:<><li>
+            <Link to={'selectedClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Selected Classes</p></Link>
                       </li>
+                      <li>
+            <Link to={'enrolledClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Enrolled Classes</p></Link>
+                      </li></>
+                      }
+                      
+                      
                       <hr className="my-8" />
                       <li>
             <Link to={'/'}><FaHome className="text-orange-500"></FaHome><p className="font-bold text-sm">Home</p></Link>

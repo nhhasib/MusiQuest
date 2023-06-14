@@ -5,14 +5,15 @@ import loginimg from "../../../assets/header/6310507.jpg";
 import SocialMediaLogin from "../../socialMediaLogin/SocialMediaLogin";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useForm } from "react-hook-form";
 
 const Login = () => {
-    const {loginUser}=useContext(AuthContext)
-  const handleLogin = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const email = form.email.value;
-      const password = form.password.value;
+  const { loginUser } = useContext(AuthContext)
+  const { register, handleSubmit,  formState: { errors } } = useForm();
+  const onSubmit = data => {
+  
+    const email = data.email;
+      const password = data.password;
       
       loginUser(email, password)
           .then(result => {
@@ -34,28 +35,20 @@ const Login = () => {
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
             <div className="card-body">
-              <form onSubmit={handleLogin}>
-                <div className="form-control">
+              <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
                   </label>
-                  <input
-                                      type="text"
-                                      name="email"
-                    placeholder="email"
-                    className="input input-bordered"
-                  />
+                  <input type="text"  {...register("email", { required: true })} name="email" placeholder="Enter Email" className="input input-bordered" />
+                                {errors.email && <span className="text-red-600">Email is required</span>}
                 </div>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Password</span>
                   </label>
-                  <input
-                                      type="text"
-                                      name="password"
-                    placeholder="password"
-                    className="input input-bordered"
-                  />
+                  <input type="password"  {...register("password", { required: true })} name="password" placeholder="Password" className="input input-bordered" />
+                                {errors.password && <span className="text-red-600">Password is required</span>}
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">
                       Forgot password?
@@ -65,7 +58,7 @@ const Login = () => {
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
-              </form>
+    </form>
               <SocialMediaLogin></SocialMediaLogin>
               <p className="text-center">
                 New to Here? Please{" "}

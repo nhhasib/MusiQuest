@@ -41,8 +41,8 @@ const Navbar = () => {
     </ul>
   </div>
                 {
-                    user?<div className="navbar-end text-white">
-                    <h1>{user.email}</h1>
+                    user?<div className="navbar-end flex gap-4 text-white">
+                    <div className='w-14'><img className='rounded-full' title={user.displayName} src={user.photoURL} alt="" /></div>
     <Link onClick={handleLogout} className="button">Logout</Link>
   </div>:<div className="navbar-end"><Link to={'/login'} className="btn">Login</Link></div>
                 }

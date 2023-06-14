@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useForm } from "react-hook-form";
 
 const Register = () => {
-    const { createUser,updateUser } = useContext(AuthContext)
+  const { createUser, updateUser } = useContext(AuthContext);
+  const { register, handleSubmit,reset, formState: { errors } } = useForm();
 
-    const handleRegister = (event) => {
-        event.preventDefault()
-        const form = event.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        const name = form.name.value;
-        const photo = form.photo.value;
-        const gander = form.gander.value;
-        const number = form.number.value;
-        const address = form.address.value;
+    const onSubmit = data => {
+        const email = data.email;
+        const password = data.password;
+        const name = data.name;
+        const photo = data.photo;
+        const gander = data.gander;
+        const number = data.number;
+        const address = data.address;
         createUser(email,password)
             .then(result => {
                 const user = result.user;
@@ -38,7 +38,7 @@ const Register = () => {
                             .then(data => 
                             {
                                 if (data.insertedId) {
-                                    form.reset();
+                                    reset();
                                     Swal.fire({
                                         position: 'top-end',
                                         icon: 'success',
@@ -63,56 +63,43 @@ const Register = () => {
           <img className="w-96 mx-auto" src={registerImg} alt="" />
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content">
-          {/* <div className="text-center lg:text-left w-1/2">
-            <img src={registerImg} alt="" />
-          </div> */}
           <div className="card flex-shrink-0 shadow-2xl bg-base-100">
             <div className="card-body">
-                          <form onSubmit={handleRegister}>
+                          <form onSubmit={handleSubmit(onSubmit)}>
                           <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input
-                                      type="text"
-                                      name="name"
-                  placeholder="Enter your name"
-                  className="input input-bordered"
-                />
+                <input type="text"  {...register("name", { required: true })} name="name" placeholder="Enter Name" className="input input-bordered" />
+                                {errors.name && <span className="text-red-600">Name is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input
-                                      type="email"
-                                      name="email"
-                  placeholder="email"
-                  className="input input-bordered"
-                />
+                <input type="email"  {...register("email", { required: true })} name="email" placeholder="Enter Email" className="input input-bordered w-[600px]" />
+                                {errors.email && <span className="text-red-600">Email is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                                      type="password"
-                                      name="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
+                <input type="password"  {...register("password", { required: true, 
+                                    minLength: 6,
+                                    maxLength: 20,
+                                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/ })} name="password" placeholder="Enter password" className="input input-bordered" />
+                                {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
+                                {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
+                                {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must be less than 20 characters</p>}
+                                {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one Uppercase one lower case, one number and one special character.</p>}
               </div>
-              <div className="flex justify-between">
+              <div className="flex gap-4 justify-between">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Photo URL</span>
                   </label>
-                  <input
-                                          type="url"
-                                          name="photo"
-                    placeholder="Enter your Photo link"
-                    className="input input-bordered"
-                  />
+                  <input type="url"  {...register("Photo", { required: true })} name="Photo" placeholder="Enter Photo" className="input input-bordered" />
+                                {errors.Photo && <span className="text-red-600">Photo is required</span>}
                 </div>
                 {/* TODO--
                             correct gander input field */}
@@ -120,35 +107,28 @@ const Register = () => {
                   <label className="label">
                     <span className="label-text">Gander</span>
                   </label>
-                  <input
-                                          type="text"
-                                          name="gander"
-                    placeholder="Enter Gender"
-                    className="input input-bordered"
-                  />
-                </div>
-              </div>
+                  <select {...register("gender")}>
+        <option value="female">Male</option>
+        <option value="male">Female</option>
+        <option value="other">Other</option>
+                    </select>
+                    
+                  </div>
+                  
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Phone Number</span>
                 </label>
-                <input
-                                      type="number"
-                                      name="number"
-                  placeholder="Enter your Phone Number"
-                  className="input input-bordered"
-                />
+                <input type="text"  {...register("number", { required: true })} name="number" placeholder="Enter number" className="input input-bordered" />
+                                {errors.number && <span className="text-red-600">Number is required</span>}
+              </div>
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Address</span>
                 </label>
-                <input
-                                      type="text"
-                                      name="address"
-                  placeholder="Enter your address"
-                  className="input input-bordered"
-                />
+                <input type="text"  {...register("address", { required: true })} name="address" placeholder="Enter address" className="input input-bordered" />
+                                {errors.address && <span className="text-red-600">Address is required</span>}
               </div>
               <div className="form-control mt-6">
                 <button className="button">Register</button>

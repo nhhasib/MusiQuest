@@ -9,12 +9,13 @@ const Classes = () => {
         const res = await fetch('http://localhost:5000/classes')
         return res.json()
     })
+    const approvedClass=classesData.filter(cls=>cls.status=='approved')
     return (
         <div>
             <SectionHeader img={img} title={'Classes'}></SectionHeader>
             <div className='grid grid-cols-3 gap-6 w-11/12 mx-auto'>
                 {
-                    classesData.map(c=><ClassCard key={c._id} data={c}></ClassCard>)
+                    approvedClass.map(c=><ClassCard key={c._id} data={c}></ClassCard>)
                 }
             </div>
         </div>

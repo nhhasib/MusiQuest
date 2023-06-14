@@ -20,7 +20,7 @@ const AddClass = () => {
         const description = form.description.value;
         const duration = form.duration.value;
         const level = form.level.value;
-        const classData = { name:name, email:email, image:photo, instructor:instructor, price:price, available:available, description:description,duration:duration,level:level }
+        const classData = { name:name, email:email, image:photo, instructor:instructor, price:price, available:available, description:description,duration:duration,level:level,status:'pending' }
         
         axios.post('http://localhost:5000/classes', classData)
             .then(data => {

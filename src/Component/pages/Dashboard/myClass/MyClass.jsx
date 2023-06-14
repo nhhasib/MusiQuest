@@ -64,6 +64,7 @@ const MyClass = () => {
                 <th>Duration</th>
                 <th>Level</th>
                 <th>Price</th>
+                <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -76,6 +77,7 @@ const MyClass = () => {
                   <td>{cls.duration}</td>
                   <td>{cls.level}</td>
                   <td>${cls.price}</td>
+                  <td>{cls.status}</td>
                   <td>
                     <td>
                       <button

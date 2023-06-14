@@ -3,6 +3,7 @@ import img from '../../../../assets/header/education-concept.jpg'
 import { useContext } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const AddClass = () => {
     const {user}=useContext(AuthContext)
@@ -22,7 +23,19 @@ const AddClass = () => {
         const classData = { name:name, email:email, image:photo, instructor:instructor, price:price, available:available, description:description,duration:duration,level:level }
         
         axios.post('http://localhost:5000/classes', classData)
-            .then(data => console.log(data))
+            .then(data => {
+                if (data.data.insertedId) {
+                    // refetch();
+                    Swal.fire({
+                      position: 'top-center',
+                      icon: 'success',
+                      title: 'Created new class successfully',
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
+                    form.reset();
+                  }
+            })
     }
 
   return (

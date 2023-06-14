@@ -2,6 +2,7 @@ import SectionHeader from "../../../shared/SectionHeader";
 import img from '../../../../assets/header/education-concept.jpg'
 import { useContext } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import axios from "axios";
 
 const AddClass = () => {
     const {user}=useContext(AuthContext)
@@ -16,9 +17,12 @@ const AddClass = () => {
         const price = form.price.value;
         const available = form.available.value;
         const description = form.description.value;
-        console.log(name,email,photo,instructor,price,available,description)
-
+        const duration = form.duration.value;
+        const level = form.level.value;
+        const classData = { name:name, email:email, image:photo, instructor:instructor, price:price, available:available, description:description,duration:duration,level:level }
         
+        axios.post('http://localhost:5000/classes', classData)
+            .then(data => console.log(data))
     }
 
   return (
@@ -83,6 +87,31 @@ const AddClass = () => {
                 {/* TODO--
                             correct gander input field */}
                
+                              </div>
+                              <div className="flex justify-between gap-6">
+                              <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Duration</span>
+                  </label>
+                  <input
+                                          type="text"
+                                          name="duration"
+                    placeholder="Enter duration of class"
+                    className="input input-bordered"
+                  />
+                                  </div>
+                                  <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Level</span>
+                </label>
+                <input
+                                      type="text"
+                                      name="level"
+                  placeholder="Enter class level"
+                  className="input input-bordered"
+                />
+              </div>
+              
                               </div>
                               <div className="flex justify-between gap-6">
                               <div className="form-control">

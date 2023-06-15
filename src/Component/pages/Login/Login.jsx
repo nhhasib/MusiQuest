@@ -6,6 +6,7 @@ import SocialMediaLogin from "../../socialMediaLogin/SocialMediaLogin";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext)
@@ -26,6 +27,9 @@ const Login = () => {
   };
   return (
     <div>
+      <Helmet>
+                <title>MusiQuest | Login</title>
+            </Helmet>
       <SectionHeader img={img} title={"Login"}></SectionHeader>
 
       <div className="hero min-h-screen bg-base-200">

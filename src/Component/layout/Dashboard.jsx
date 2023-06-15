@@ -1,13 +1,19 @@
 import React, { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
-import logo from '../../../../assets/logo.png'
-import { FaBookReader, FaHome, FaUserFriends, FaUserGraduate, FaUserTie, FaUsers } from "react-icons/fa";
-import { AuthContext } from "../../../AuthProvider/AuthProvider";
-import { useQuery } from "@tanstack/react-query";
-import useUser from "../../../Hooks/useUser";
+import logo from '../../assets/logo.png'
+import { FaBookReader, FaHome, FaUser, FaUserGraduate, FaUserTie, FaUsers } from "react-icons/fa";
+import useUser from "../Hooks/useUser";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
-const DMain = () => {
+
+const Dashboard = () => {
   const [currentUserStatus] = useUser();
+  const { logoutUser } = useContext(AuthContext);
+    const handleLogout = () => {
+        logoutUser()
+            .then()
+            .catch()
+    }
   console.log(currentUserStatus)
   return (
     <div>
@@ -50,17 +56,32 @@ const DMain = () => {
             </li>
             <li>
             <Link to={'allusers'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Manage Users</p></Link>
-                      </li></>:currentUserStatus?.role=='instructor'?<><li>
+                </li>
+            <li>
+            <Link to={'/dashboard'}><FaUser className="text-orange-500"></FaUser><p className="font-bold text-sm">Profile</p></Link>
+                </li>
+                
+
+              </> : currentUserStatus?.role == 'instructor' ? <><li>
             <Link to={'addClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Add Class</p></Link>
                       </li>
                       <li>
             <Link to={'myClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">My Classes</p></Link>
-                      </li></>:<><li>
+                  </li>
+                  <li>
+                  <Link to={'/dashboard'}><FaUser className="text-orange-500"></FaUser><p className="font-bold text-sm">Profile</p></Link>
+                </li>
+                
+                </> : <><li>
             <Link to={'selectedClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Selected Classes</p></Link>
                       </li>
                       <li>
             <Link to={'enrolledClass'}><FaUsers className="text-orange-500"></FaUsers><p className="font-bold text-sm">Enrolled Classes</p></Link>
-                      </li></>
+                    </li>
+                    <li>
+                  <Link to={'/dashboard'}><FaUser className="text-orange-500"></FaUser><p className="font-bold text-sm">Profile</p></Link>
+                </li>
+                  </>
                       }
                       
                       
@@ -74,7 +95,7 @@ const DMain = () => {
                       <li>
                       <Link to={'/instructors'}><FaUserTie className="text-orange-500"></FaUserTie><p className="font-bold text-sm">All Instructors</p></Link>
                       </li>
-                      <button className="button">Logout</button>
+                      <button onClick={handleLogout} className="button">Logout</button>
           </ul>
         </div>
       </div>
@@ -82,4 +103,4 @@ const DMain = () => {
   );
 };
 
-export default DMain;
+export default Dashboard;

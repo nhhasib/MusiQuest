@@ -1,17 +1,100 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const ClassCard = ({img,subtitle}) => {
-    return (
-        <div className='relative my-4 '>
-            <div className='rounded-2xl'>
-            <img className='rounded-2xl' src={img} alt="" />
-            </div>
-            <div className='bg-black bg-opacity-70 bottom-0 absolute px-2 py-6 text-white rounded-b-2xl'>
-            <h3 className='font-bold text-2xl my-2'>{subtitle}</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis eveniet sapiente harum velit officia possimus beatae corporis cumque sit! Dolor!</p>
-            </div>
+const ClassCard = ({ data }) => {
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const {
+    _id,
+    name,
+    description,
+    instructor,
+    level,
+    price,
+    available,
+    image,
+    enrolled,
+  } = data;
+  console.log(_id);
+  const handleEnroll = (item) => {
+    if (user && user.email) {
+      const enrolledItem = {
+        courseId: _id,
+        name,
+        image,
+        price,
+        instructor,
+        email: user.email,
+        available,
+        enrolled,
+      };
+      fetch("https://musi-quest-server.vercel.app/selectedClass", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(enrolledItem),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            // refetch();
+            Swal.fire({
+              position: "top-center",
+              icon: "success",
+              title: "Food added in the cart",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        });
+    } else {
+      Swal.fire({
+        title: "Please login to order the food",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Login now!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login", { state: { from: location } });
+        }
+      });
+    }
+  };
+
+  return (
+    <div>
+      <div
+        className={`card lg:w-96 lg:h-[650px] ${
+          available <= 0 ? "bg-red-400" : "bg-base-100"
+        } shadow-xl`}
+      >
+        <figure>
+          <img className="w-full h-[250px]" src={image} alt="Shoes" />
+        </figure>
+        <div className="card-body text-center">
+          <h2 className="font-bold text-3xl">{name}</h2>
+          <p>{description}</p>
+          <p>
+            <span className="font-bold">Instractor:</span> {instructor}
+          </p>
+          <h2 className="font-bold"> Available sit: {available}</h2>
+          <h2 className="font-bold"> Already Enrolled: {enrolled}</h2>
+          <h2 className="font-bold text-xl">$ {price}</h2>
+
+          <div className="card-action justify-center">
+            <button onClick={() => handleEnroll(data)} className="button">
+              Select
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ClassCard;

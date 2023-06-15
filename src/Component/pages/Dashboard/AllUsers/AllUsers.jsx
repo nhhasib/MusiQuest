@@ -1,17 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 const AllUsers = () => {
-  const token = localStorage.getItem('access-token');
+  const token = localStorage.getItem("access-token");
   const { data: users = [], refetch } = useQuery(["allUsers"], async () => {
-    const res = await fetch("http://localhost:5000/allUsers",{ headers: {
-      authorization: `bearer ${token}`
-  }});
+    const res = await fetch("https://musi-quest-server.vercel.app/allUsers", {
+      headers: {
+        authorization: `bearer ${token}`,
+      },
+    });
     return res.json();
   });
 
   const handleAdmin = (user) => {
-    fetch(`http://localhost:5000/users/admin/${user._id}`, { method: "PATCH" })
+    fetch(`https://musi-quest-server.vercel.app/users/admin/${user._id}`, {
+      method: "PATCH",
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -28,9 +33,12 @@ const AllUsers = () => {
       });
   };
   const handleInstructor = (user) => {
-    fetch(`http://localhost:5000/users/instructors/${user._id}`, {
-      method: "PATCH",
-    })
+    fetch(
+      `https://musi-quest-server.vercel.app/users/instructors/${user._id}`,
+      {
+        method: "PATCH",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -48,7 +56,7 @@ const AllUsers = () => {
   };
 
   const handleStudent = (user) => {
-    fetch(`http://localhost:5000/users/students/${user._id}`, {
+    fetch(`https://musi-quest-server.vercel.app/users/students/${user._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -65,9 +73,13 @@ const AllUsers = () => {
           });
         }
       });
-  }
+  };
   return (
+    
     <div className="w-11/12 mx-auto">
+      <Helmet>
+                <title>MusiQuest | All Users</title>
+            </Helmet>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
@@ -85,36 +97,39 @@ const AllUsers = () => {
                 <th>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
-                <td>{user.role=="admin"?'Admin':user.role=='instructor'?'Instructor':'Student'}</td>
+                <td>
+                  {user.role == "admin"
+                    ? "Admin"
+                    : user.role == "instructor"
+                    ? "Instructor"
+                    : "Student"}
+                </td>
                 <td>
                   <div className="flex items-center gap-4">
                     {user.role == "admin" ? (
                       <div className="flex gap-4 items-center">
-                       
-                      <button
+                        <button
                           onClick={() => handleInstructor(user)}
                           className="button"
                         >
                           Instructor
                         </button>
-                      <button
+                        <button
                           onClick={() => handleStudent(user)}
                           className="button"
                         >
                           Student
                         </button>
-                        
                       </div>
                     ) : user.role === "instructor" ? (
                       <div className="flex gap-4 items-center">
-                       
                         <button
                           onClick={() => handleAdmin(user)}
                           className="button"
                         >
                           Admin
-                          </button>
-                          <button
+                        </button>
+                        <button
                           onClick={() => handleStudent(user)}
                           className="button"
                         >
@@ -123,7 +138,6 @@ const AllUsers = () => {
                       </div>
                     ) : (
                       <div className="flex gap-4 items-center">
-                       
                         <button
                           onClick={() => handleAdmin(user)}
                           className="button"

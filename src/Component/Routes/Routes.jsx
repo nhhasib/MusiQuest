@@ -5,7 +5,6 @@ import Instructors from "../pages/Instructors/Instructors";
 import Classes from "../pages/Classes/Classes";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import DMain from "../pages/Dashboard/Layout/DMain";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import SelectedClass from "../pages/Dashboard/SelectedClass/SelectedClass";
 import EnrolledClass from "../pages/Dashboard/EnrolledClass/EnrolledClass";
@@ -15,6 +14,8 @@ import Payment from "../pages/Dashboard/payment/Payment";
 import ManageClass from "../pages/Dashboard/manageClass/ManageClass";
 import Error from "../pages/Error/Error";
 import PrivateRoutes from "./PrivateRoutes";
+import DHome from "../pages/Dashboard/Home/DHome";
+import Dashboard from "../layout/Dashboard";
 
 export const router = createBrowserRouter(
     [
@@ -29,7 +30,7 @@ export const router = createBrowserRouter(
             {
                 path: '/instructors',
                 element: <Instructors></Instructors>,
-                loader:()=>fetch('../../../public/instructors.json')
+                
             },
             {
                 path: '/classes',
@@ -47,8 +48,12 @@ export const router = createBrowserRouter(
         },
         {
             path: 'dashboard',
-            element: <PrivateRoutes><DMain></DMain></PrivateRoutes>,
+            element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
             children: [
+                {
+                    path: '/dashboard',
+                    element:<DHome></DHome>
+            },
                 {
                     path: 'manageClass',
                     element:<ManageClass></ManageClass>

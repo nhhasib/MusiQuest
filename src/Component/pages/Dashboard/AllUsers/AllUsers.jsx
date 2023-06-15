@@ -2,8 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
 
 const AllUsers = () => {
+  const token = localStorage.getItem('access-token');
   const { data: users = [], refetch } = useQuery(["allUsers"], async () => {
-    const res = await fetch("http://localhost:5000/allUsers");
+    const res = await fetch("http://localhost:5000/allUsers",{ headers: {
+      authorization: `bearer ${token}`
+  }});
     return res.json();
   });
 

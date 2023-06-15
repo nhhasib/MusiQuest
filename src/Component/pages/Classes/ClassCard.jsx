@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom';
 const ClassCard = ({ data }) => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-    const { _id, name, description, instructor, level, price, available, image } = data;
+    const { _id, name, description, instructor, level, price, available, image,enrolled } = data;
     console.log(_id)
     const handleEnroll = item => { 
         if (user && user.email) {
-          const enrolledItem={courseId:_id,name,image,price,instructor,email:user.email}
+          const enrolledItem={courseId:_id,name,image,price,instructor,email:user.email,available,enrolled}
           fetch('http://localhost:5000/selectedClass', {
             method: 'POST',
             headers: {
@@ -47,16 +47,19 @@ const ClassCard = ({ data }) => {
           })
         }
           
-      }
+  }
+  
+  
     return (
         <div>
-            <div className="card w-96 h-[650px] bg-base-100 shadow-xl">
+            <div className={`card w-96 h-[650px] ${available<=0?'bg-red-400':'bg-base-100'} shadow-xl`}>
                 <figure><img className='w-full h-[250px]' src={image} alt="Shoes" /></figure>
                 <div className="card-body text-center">
                     <h2 className="font-bold text-3xl">{name}</h2>
                     <p>{description}</p>
                     <p><span className='font-bold'>Instractor:</span> {instructor}</p>
                     <h2 className='font-bold'> Available sit: {available}</h2>
+                    <h2 className='font-bold'> Already Enrolled: {enrolled}</h2>
                     <h2 className='font-bold text-xl'>$ {price}</h2>
                     
     <div className="card-action justify-center">

@@ -6,10 +6,10 @@ import { useQuery } from '@tanstack/react-query';
 
 const Classes = () => {
     const {data:classesData=[] } = useQuery(['classes'], async () => {
-        const res = await fetch('http://localhost:5000/classes')
+        const res = await fetch('http://localhost:5000/classes');
         return res.json()
     })
-    const approvedClass=classesData.filter(cls=>cls.status=='approved')
+    const approvedClass=classesData?.filter(cls=>cls.status=='approved')
     return (
         <div>
             <SectionHeader img={img} title={'Classes'}></SectionHeader>

@@ -4,8 +4,11 @@ import { FaCheckCircle, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 
 const ManageClass = () => {
+    const token = localStorage.getItem('access-token');
     const {data:classesData=[],refetch } = useQuery(['classes'], async () => {
-        const res = await fetch('http://localhost:5000/classes')
+        const res = await fetch('http://localhost:5000/classes',{ headers: {
+            authorization: `bearer ${token}`
+        }});
         return res.json()
     })
    

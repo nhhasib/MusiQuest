@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const CheckOutForm = ({price,selectedClasses}) => {
   const stripe = useStripe();
@@ -88,6 +89,36 @@ const CheckOutForm = ({price,selectedClasses}) => {
                 showConfirmButton: false,
                 timer: 1500
               })
+              {
+                selectedClasses?.map(cls => {
+                  const availableRemaining = cls.available - 1;
+                  const enrolledtotal = cls.enrolled + 1;
+                  const update={available:availableRemaining,enrolled:enrolledtotal}
+                  fetch(`http://localhost:5000/classes/enrolled/${cls.courseId}`, {
+                    method: "PATCH",
+                    headers: {
+        'content-type':'application/json'
+    },
+      body:JSON.stringify(update)
+    })
+                    .then((res) => res.json())
+                    .then(data => {
+                      
+                      if (data.modifiedCount > 0) {
+                        const {courseId, name, instructor, price, available, image,enrolled} = cls;
+                        const enrolledItem = { courseId,name,image,price,instructor,email:user.email,available,enrolled}
+                        
+                        fetch('http://localhost:5000/classes/enrolled', {
+                          method: 'POST',
+                          headers: {
+                            'content-type':'application/json'
+                          },
+                          body:JSON.stringify(enrolledItem)
+                      })
+                    }
+                  })
+                })
+              }
             }
         })
       }

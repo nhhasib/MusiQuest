@@ -16,6 +16,9 @@ const AllUsers = () => {
   const handleAdmin = (user) => {
     fetch(`https://musi-quest-server.vercel.app/users/admin/${user._id}`, {
       method: "PATCH",
+      headers: {
+        authorization: `bearer ${token}`,
+      }
     })
       .then((res) => res.json())
       .then((data) => {
@@ -37,6 +40,9 @@ const AllUsers = () => {
       `https://musi-quest-server.vercel.app/users/instructors/${user._id}`,
       {
         method: "PATCH",
+        headers: {
+          authorization: `bearer ${token}`,
+        }
       }
     )
       .then((res) => res.json())

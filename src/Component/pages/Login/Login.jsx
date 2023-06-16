@@ -3,7 +3,7 @@ import img from "../../../assets/header/table-musician.jpg";
 import SectionHeader from "../../shared/SectionHeader";
 import loginimg from "../../../assets/header/6310507.jpg";
 import SocialMediaLogin from "../../socialMediaLogin/SocialMediaLogin";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
@@ -18,10 +18,12 @@ const Login = () => {
       
       loginUser(email, password)
           .then(result => {
-              const user = result.user;
+            const user = result.user;
+            
               
           })
-          .catch(error => console.log(error))
+      .catch(error => console.log(error))
+    
       
 
   };

@@ -49,11 +49,11 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
-        axios
-          .post("https://musi-quest-server.vercel.app/jwt", {
+        axios.post("https://musi-quest-server.vercel.app/jwt", {
             email: currentUser.email,
           })
           .then((data) => {
+            console.log(data)
             localStorage.setItem("access-token", data.data.token);
             setLoading(false);
           });
@@ -61,8 +61,6 @@ const AuthProvider = ({ children }) => {
         localStorage.removeItem("access-token");
         setLoading(false);
       }
-
-     
     });
     return () => {
       return unsubscribe();

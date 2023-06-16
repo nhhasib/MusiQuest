@@ -173,7 +173,7 @@ const AddClass = () => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="button">Register</button>
+                  <button className="button">Add new class</button>
                 </div>
               </form>
             </div>

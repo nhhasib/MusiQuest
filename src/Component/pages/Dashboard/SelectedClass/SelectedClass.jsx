@@ -32,7 +32,7 @@ const SelectedClass = () => {
           .then((data) => {
             if (data.deletedCount > 0) {
               refetch();
-              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              Swal.fire("Deleted!", "Your class has been deleted.", "success");
             }
           });
       }

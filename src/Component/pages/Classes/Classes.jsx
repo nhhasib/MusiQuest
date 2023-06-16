@@ -17,7 +17,7 @@ const Classes = () => {
                 <title>MusiQuest | All Classess</title>
             </Helmet>
       <SectionHeader img={img} title={"Classes"}></SectionHeader>
-      <div className="grid grid-cols-3 gap-6 w-11/12 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-11/12 mx-auto my-4">
         {approvedClass.map((c) => (
           <ClassCard key={c._id} data={c}></ClassCard>
         ))}

@@ -17,7 +17,7 @@ const ClassCard = ({ data }) => {
     image,
     enrolled,
   } = data;
-  console.log(_id);
+  
   const handleEnroll = (item) => {
     if (user && user.email) {
       const enrolledItem = {
@@ -44,7 +44,7 @@ const ClassCard = ({ data }) => {
             Swal.fire({
               position: "top-center",
               icon: "success",
-              title: "Food added in the cart",
+              title: "Class enrolled successfully",
               showConfirmButton: false,
               timer: 1500,
             });
@@ -52,7 +52,7 @@ const ClassCard = ({ data }) => {
         });
     } else {
       Swal.fire({
-        title: "Please login to order the food",
+        title: "Please login to select the course",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",

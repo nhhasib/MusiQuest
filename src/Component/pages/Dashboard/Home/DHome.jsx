@@ -6,7 +6,6 @@ import { Helmet } from 'react-helmet-async';
 const DHome = () => {
     const { user } = useContext(AuthContext)
     const [currentUserStatus ] = useUser();
-    console.log(currentUserStatus)
     return (
         <div>
             <Helmet>
@@ -19,7 +18,7 @@ const DHome = () => {
             <div className='bg-slate-200 w-1/2 mx-auto rounded-xl p-4 my-4'>
             <h1 className='font-bold text-2xl text-center my-4'>{user.displayName}</h1>
             <p className='text-center'>Email: {user.email}</p>
-            <p className='font-bold text-center'>Your are: <span className='text-red-600'>{currentUserStatus?.role}</span></p>
+            <p className='font-bold text-center'>Your are: <span className='text-red-600'>{currentUserStatus?.role?currentUserStatus.role:'Stundent'}</span></p>
             </div>
         </div>
     );

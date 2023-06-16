@@ -2,6 +2,7 @@ import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import { useQuery } from "@tanstack/react-query";
 import "keen-slider/keen-slider.min.css";
+import { Link } from "react-router-dom";
 // import "./styles.css"
 
 const PopularInstructor = () => {
@@ -24,8 +25,7 @@ const PopularInstructor = () => {
     <div className="text-center w-11/12 mx-auto my-16">
       <h1 className="section-title">Popular Instructor</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa.
+      Experience the expertise of our popular instructors at Musiquest. Learn from renowned musicians and educators who inspire and guide students to achieve their musical aspirations. Join us now and embark on a transformative learning journey with our esteemed instructors.
       </p>
       <div ref={sliderRef} className="keen-slider rounded-xl my-4">
         {sliceData.map((cls, index) => (
@@ -45,7 +45,7 @@ const PopularInstructor = () => {
                   <p>{cls.email}</p>
                 </div>
                 <div className="card-actions justify-center text-white">
-                  <button className="btn btn-primary">Details</button>
+                  <Link to={'/instructors'}><button className="btn btn-primary">Details</button></Link>
                 </div>
               </div>
             </div>

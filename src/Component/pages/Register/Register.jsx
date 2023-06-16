@@ -154,8 +154,7 @@ const Register = () => {
                       <span className="text-red-600">Photo is required</span>
                     )}
                   </div>
-                  {/* TODO--
-                            correct gander input field */}
+                  
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Gander</span>

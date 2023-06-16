@@ -17,7 +17,7 @@ const Instructors = () => {
                 <title>MusiQuest | All Instructors</title>
             </Helmet>
       <SectionHeader img={img} title={"Instructors"}></SectionHeader>
-      <div className="grid lg:grid-cols-3 gap-6 w-11/12 mx-auto ">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-11/12 mx-auto ">
         {instructors.map((instractor) => (
           <InstructorCard
             key={instractor.instructor_id}

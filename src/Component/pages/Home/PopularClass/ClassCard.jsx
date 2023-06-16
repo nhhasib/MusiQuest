@@ -17,7 +17,7 @@ const ClassCard = ({ data }) => {
     image,
     enrolled,
   } = data;
-  console.log(_id);
+  
   const handleEnroll = (item) => {
     if (user && user.email) {
       const enrolledItem = {

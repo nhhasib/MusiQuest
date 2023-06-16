@@ -12,8 +12,9 @@ import { useQuery } from "@tanstack/react-query";
 const Payment = () => {
     const [selectedClasses] = useSelectedClasses()
     const total = selectedClasses?.reduce((sum, item) => item.price + sum, 0);
-    const price=parseFloat(total.toFixed(2))
-  const stripePromise = loadStripe('pk_test_51NIumhEQ8v7jOQAgmoBSxD2bnZ4fVEJVkSL7T4yTiLeIWHepGCvKQ150BtKjpaRL7MfbOjcbK8ogfoTLljdpE1J300M7IhcOpl');
+    const price=parseFloat(total?.toFixed(2))
+  const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
+  
   
   const { user } = useContext(AuthContext);
   const token = localStorage.getItem("access-token");
@@ -31,7 +32,7 @@ const Payment = () => {
       return res.json();
     }
   )
-  console.log(myPayment)
+ 
   return (
     <div>
       <Helmet>
@@ -39,11 +40,7 @@ const Payment = () => {
             </Helmet>
       <img className="blur-sm" src={img} alt="" />
       <h1 className="section-title text-center">Make Payment</h1>
-      {
-        myPayment.map(pay => {
-          <p>oinsoicnc</p>
-        })
-      }
+      
       <Elements stripe={stripePromise}>
               <CheckOutForm price={price} selectedClasses={selectedClasses} />
       </Elements>

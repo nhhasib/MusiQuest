@@ -19,9 +19,11 @@ const Footer = () => {
     <a className="link link-hover">Contact</a> 
     <a className="link link-hover">Jobs</a> 
     <a className="link link-hover">Press kit</a>
-  </div> 
-  
+          </div> 
 </footer> 
+          <hr />
+          <p className='text-center'>Copyright © 2023 - All right reserved by Nafiul Hasan Hasib</p>
+  
         </div>
     );
 };

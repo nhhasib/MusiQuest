@@ -14,8 +14,7 @@ const PopularClasses = () => {
     <div className="text-center w-11/12 mx-auto my-16">
       <h1 className="section-title">Popular Classes</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa.
+      Discover our popular classes at Musiquest. Choose from a curated selection of highly praised courses, spanning various genres and skill levels. Join now to learn from expert instructors and embark on an extraordinary musical adventure.
       </p>
       <div className="grid lg:grid-cols-3 gap-8 mt-6">
         {sliceData.map((cls) => (

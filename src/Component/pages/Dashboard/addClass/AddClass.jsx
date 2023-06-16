@@ -111,8 +111,7 @@ const AddClass = () => {
                       className="input input-bordered"
                     />
                   </div>
-                  {/* TODO--
-                            correct gander input field */}
+                  
                 </div>
                 <div className="flex justify-between gap-6">
                   <div className="form-control">

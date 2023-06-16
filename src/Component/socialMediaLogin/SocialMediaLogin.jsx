@@ -40,7 +40,7 @@ const SocialMediaLogin = () => {
           // navigate('/')
           .catch();
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => console.log(error));
   };
   return (
     <div className="flex flex-col mx-auto text-center items-center my-4">

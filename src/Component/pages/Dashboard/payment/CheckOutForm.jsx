@@ -4,6 +4,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { key } from "localforage";
 
 const CheckOutForm = ({ price, selectedClasses }) => {
   const stripe = useStripe();
@@ -18,7 +19,7 @@ const CheckOutForm = ({ price, selectedClasses }) => {
   useEffect(() => {
     if (price > 0) {
       axiosSecure.post("/create-payment-intent", { price }).then((res) => {
-        console.log(res.data.clientSecret);
+        
         setClientSecret(res.data.clientSecret);
       });
     }
@@ -34,17 +35,17 @@ const CheckOutForm = ({ price, selectedClasses }) => {
     if (card == null) {
       return;
     }
-    console.log("card", card);
+    
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card,
     });
     if (error) {
-      console.log("[error]", error);
+      
       setCardError(error.message);
     } else {
       setCardError("");
-      console.log("[PaymentMethod]", paymentMethod);
+      
     }
 
     setProcessing(true);
@@ -59,7 +60,7 @@ const CheckOutForm = ({ price, selectedClasses }) => {
         },
       });
     if (confirmError) {
-      console.log(confirmError);
+      console.log(confirmError)
     }
     setProcessing(false);
     if (paymentIntent?.status == "succeeded") {
@@ -75,7 +76,6 @@ const CheckOutForm = ({ price, selectedClasses }) => {
         classNames: selectedClasses.map((item) => item.name),
       };
       axiosSecure.post("/payments", payment).then((res) => {
-        console.log(res.data);
         if (res.data.insertResult.insertedId) {
           Swal.fire({
             position: "top-center",

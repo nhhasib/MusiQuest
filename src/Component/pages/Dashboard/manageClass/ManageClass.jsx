@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaCheckCircle, FaCommentAlt, FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 
@@ -23,7 +24,7 @@ const ManageClass = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        
         if (data.modifiedCount) {
           refetch();
           Swal.fire({
@@ -43,7 +44,7 @@ const ManageClass = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+    
         if (data.modifiedCount) {
           refetch();
           Swal.fire({

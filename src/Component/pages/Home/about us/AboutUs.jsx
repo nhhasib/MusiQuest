@@ -12,20 +12,17 @@ const AboutUs = () => {
         <h1 className="section-title">About Us</h1>
         <h3>Learn The Music From The Core & Become Mastery</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec.
+        Welcome to Musiquest, the premier online destination for music education. Explore our expertly crafted courses, connect with fellow music lovers, and unlock your musical potential. Join us and embark on a transformative musical journey today.
         </p>
         <div className="flex gap-6 my-4">
          
                   <div>
-                  <p className="my-2">✓ Basic Knowledge</p>      
-                <p>✓ Basic Knowledge</p>  
+                  <p className="my-2">✓ Diverse Course Selection</p>      
+                <p>✓ Experienced Instructors</p>  
                   </div>    
                   <div>
-                  <p className="my-2">✓ Basic Knowledge</p>      
-                      <p>✓ Basic Knowledge</p>
+                  <p className="my-2">✓ Interactive Community</p>      
+                      <p>✓ Flexible Learning</p>
                   </div>   
           
               </div>

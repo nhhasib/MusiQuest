@@ -14,7 +14,7 @@ const Dashboard = () => {
             .then()
             .catch()
     }
-  console.log(currentUserStatus)
+  
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -39,7 +39,7 @@ const Dashboard = () => {
                 </svg>
               </label>
             </div>
-            <div className="flex-1 px-2 mx-2 lg:hidden">Navbar Title</div>
+            <div className="flex-1 px-2 mx-2 lg:hidden">MusiQuest</div>
 
           </div>
           <Outlet></Outlet>

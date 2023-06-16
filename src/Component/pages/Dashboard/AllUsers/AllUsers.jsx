@@ -64,10 +64,12 @@ const AllUsers = () => {
   const handleStudent = (user) => {
     fetch(`https://musi-quest-server.vercel.app/users/students/${user._id}`, {
       method: "PATCH",
+      headers: {
+        authorization: `bearer ${token}`,
+      }
     })
       .then((res) => res.json())
       .then((data) => {
-        
         if (data.modifiedCount) {
           refetch();
           Swal.fire({
@@ -98,7 +100,7 @@ const AllUsers = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
+            {users?.map((user, index) => (
               <tr key={user._id}>
                 <th>{index + 1}</th>
                 <td>{user.name}</td>

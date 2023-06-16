@@ -4,9 +4,7 @@ import ClassCard from "./ClassCard";
 
 const PopularClasses = () => {
   const { data: popularData = [] } = useQuery(["popularClass"], async () => {
-    const res = await fetch(
-      "https://musi-quest-server.vercel.app/popularClass"
-    );
+    const res = await fetch("https://musi-quest-server.vercel.app/popularClass");
     return res.json();
   });
   const sliceData = popularData.slice(0, 6);
